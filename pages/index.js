@@ -12,18 +12,27 @@ export default function Home() {
   });
 
   return (
-    <main className={styles.main}>
-      <h2>Valor:</h2>
-      <input
-        type="number"
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-      />
-
-      <h2>QR Code:</h2>
-      <QRCode value={url} />
-      <p>{url}</p>
-    </main>
+    <>
+      <header className={styles.tag}>
+        Uso interno da Diretoria do CAEC. Não compartilhe o sistema com
+        terceiros.
+      </header>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <h2>Valor:</h2>
+          <input
+            type="number"
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+          />
+        </div>
+        <div className={styles.container}>
+          <h2>Escaneie o QR Code:</h2>
+          <QRCode value={url} />
+          <p>{url}</p>
+        </div>
+      </main>
+    </>
   );
 }
