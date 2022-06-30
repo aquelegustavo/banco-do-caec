@@ -22,6 +22,9 @@ export default function Home() {
           <h2>Valor:</h2>
           <input
             type="number"
+            min="0.00"
+            max="1000.00"
+            step="0.01"
             onChange={(e) => {
               setValue(e.target.value);
             }}
