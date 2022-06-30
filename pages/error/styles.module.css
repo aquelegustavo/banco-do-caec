@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorBox {
+  flex-direction: column;
+  text-align: center;
+
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  max-width: 20rem;
+  background: var(--branco-branco);
+  border-radius: 1rem;
+
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.errorBox h1 {
+  margin: 0;
+}
+
+.errorIcon {
+  width: 6rem;
+  margin: 1rem;
+
+  text-align: center;
+}
+
+.errorIcon svg {
+  max-width: 6rem;
+}
+
+.errorIcon .circle {
+  stroke-dasharray: 260.75219024795285px, 260.75219024795285px;
+  stroke-dashoffset: 260.75219024795285px;
+  animation: ani-error-circle 1.2s linear;
+}
+.errorIcon .line1 {
+  stroke-dasharray: 54px 55px;
+  stroke-dashoffset: 55px;
+  stroke-linecap: round;
+  animation: ani-error-line 0.15s 1.2s linear both;
+}
+.errorIcon .line2 {
+  stroke-dasharray: 54px 55px;
+  stroke-dashoffset: 55px;
+  stroke-linecap: round;
+  animation: ani-error-line 0.2s 0.9s linear both;
+}
+
+@keyframes ani-error-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ani-error-circle {
+  0% {
+    stroke-dasharray: 0, 260.75219024795285px;
+    stroke-dashoffset: 0;
+  }
+  35% {
+    stroke-dasharray: 120px, 120px;
+    stroke-dashoffset: -120px;
+  }
+  70% {
+    stroke-dasharray: 0, 260.75219024795285px;
+    stroke-dashoffset: -260.75219024795285px;
+  }
+  100% {
+    stroke-dasharray: 260.75219024795285px, 0;
+    stroke-dashoffset: -260.75219024795285px;
+  }
+}
